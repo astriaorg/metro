@@ -17,8 +17,8 @@ on:
       - "astria"
 
 jobs:
-   # lint and test jobs came from Metro
-   lint:
+  # lint and test jobs came from Metro
+  lint:
     uses: ./.github/workflows/lint.yml
   test:
     needs: lint
