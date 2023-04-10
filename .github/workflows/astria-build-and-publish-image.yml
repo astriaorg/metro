@@ -17,7 +17,15 @@ on:
       - "astria"
 
 jobs:
+   # lint and test jobs came from Metro
+   lint:
+    uses: ./.github/workflows/lint.yml
+  test:
+    needs: lint
+    uses: ./.github/workflows/test.yml
+
   build-and-publish-latest:
+    needs: [lint, test]
     runs-on: ubuntu-latest
     steps:
       # Checking out the repo
