@@ -14,13 +14,11 @@ WORKDIR /go/src/github.com/histolabs/metro
 COPY . .
 
 # Install minimum necessary dependencies, build Cosmos SDK, remove packages
-ARG TARGETPLATFORM
-RUN compile
 RUN apk add --no-cache $PACKAGES && \
     make install
 
 # Final image
-FROM --platform=$BUILDPLATFORM alpine:edge
+FROM alpine:edge
 
 # Install ca-certificates
 RUN apk add --update ca-certificates
