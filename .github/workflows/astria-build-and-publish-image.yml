@@ -68,7 +68,8 @@ jobs:
           file: ./docker/Dockerfile.test
           context: .
           # It takes over 30 minutes to build the arm image right now, so we only build it on tags which is what we use for releases.
-          platforms: ${{ contains(github.ref, 'refs/tags/v') && 'linux/amd64,linux/arm64' || 'linux/amd64' }}
+          # platforms: ${{ contains(github.ref, 'refs/tags/v') && 'linux/amd64,linux/arm64' || 'linux/amd64' }}
+          platforms: linux/amd64,linux/arm64
           # push: true
           push: false
           tags: ${{ steps.metadata.outputs.tags }}
