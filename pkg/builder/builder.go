@@ -107,13 +107,25 @@ func (k *KeyringSigner) NewTxBuilder(opts ...TxBuilderOption) sdkclient.TxBuilde
 // account number must be set by calling k.QueryAccountNumber or by manually setting it via
 // k.SetAccountNumber for the built transactions to be valid.
 func (k *KeyringSigner) BuildSignedTx(builder sdkclient.TxBuilder, isSecondary bool, msg ...sdktypes.Msg) (authsigning.Tx, error) {
+	if k == nil {
+		panic("nil KeyringSigner")
+	}
+
+	var sequence uint64
 	k.RLock()
-	sequence := k.acc.GetSequence()
-	if isSecondary {
-		sequence = k.acc.GetSecondarySequence(k.secondaryChainID)
-		builder.SetSecondaryChainID(k.secondaryChainID)
+	if k.acc == nil {
+		sequence = 0
+	} else {
+		sequence = k.acc.GetSequence()
+		if isSecondary {
+			sequence = k.acc.GetSecondarySequence(k.secondaryChainID)
+		}
 	}
 	k.RUnlock()
+
+	if isSecondary {
+		builder.SetSecondaryChainID(k.secondaryChainID)
+	}
 
 	// set the msg
 	err := builder.SetMsgs(msg...)
@@ -235,17 +247,26 @@ func (k *KeyringSigner) GetSignerInfo() *keyring.Record {
 }
 
 func (k *KeyringSigner) GetSignerData(isSecondary bool) (authsigning.SignerData, error) {
+	var (
+		sequence, accountNumber uint64
+	)
+
 	k.RLock()
-	accountNumber := k.acc.GetAccountNumber()
-	sequence := k.acc.GetSequence()
-	if isSecondary {
-		if k.secondaryChainID == "" {
-			k.RUnlock()
-			return authsigning.SignerData{}, errors.New("no secondary chain-id set for secondary tx")
+	if k.acc == nil {
+		sequence = 0
+	} else {
+		accountNumber = k.acc.GetAccountNumber()
+		sequence = k.acc.GetSequence()
+		if isSecondary {
+			if k.secondaryChainID == "" {
+				k.RUnlock()
+				return authsigning.SignerData{}, errors.New("no secondary chain-id set for secondary tx")
+			}
+			accountNumber = 0
+			sequence = k.acc.GetSecondarySequence(k.secondaryChainID)
 		}
-		accountNumber = 0
-		sequence = k.acc.GetSecondarySequence(k.secondaryChainID)
 	}
+
 	k.RUnlock()
 
 	record, err := k.Key(k.keyringAccName)

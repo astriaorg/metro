@@ -110,6 +110,8 @@ github.com/armon/go-metrics v0.4.1 h1:hR91U9KYmb6bLBYLQjyM+3j+rcd/UhE+G78SFnF8gJ
 github.com/armon/go-metrics v0.4.1/go.mod h1:E6amYzXo6aW1tqzoZGT755KkbgrJsSdpwZ+3JqfkOG4=
 github.com/armon/go-radix v0.0.0-20180808171621-7fddfc383310/go.mod h1:ufUuZ+zHj4x4TnLV4JWEpy2hxWSpsRywHrMgIH9cCH8=
 github.com/aryann/difflib v0.0.0-20170710044230-e206f873d14a/go.mod h1:DAHtR1m6lCRdSC2Tm3DSWRPvIPr6xNKyeHdqDQSQT+A=
+github.com/astriaorg/cosmos-sdk v0.0.0-20230531100755-d028485dcf8a h1:Bsk7uEWl5SnjM+VL1BmD2jNLZ3rIFSsSq08QrJ5Pa9c=
+github.com/astriaorg/cosmos-sdk v0.0.0-20230531100755-d028485dcf8a/go.mod h1:2Oq+pYLgUOdcv++AXR77Nv/Yiw4dckswSQN1iyScUqk=
 github.com/aws/aws-lambda-go v1.13.3/go.mod h1:4UKl9IzQMoD+QF79YdCuzCwp8VbmG4VAQwij/eHl5CU=
 github.com/aws/aws-sdk-go v1.15.78/go.mod h1:E3/ieXAlvM0XWO57iftYVDLLvQ824smPP3ATZkfNZeM=
 github.com/aws/aws-sdk-go v1.27.0/go.mod h1:KmX6BPdI08NWTb3/sm4ZGu5ShLoqVDhKgpiN924inxo=
@@ -534,8 +536,6 @@ github.com/hashicorp/memberlist v0.1.3/go.mod h1:ajVTdAv/9Im8oMAAj5G31PhhMCZJV2p
 github.com/hashicorp/serf v0.8.2/go.mod h1:6hOLApaqBFA1NXqRQAsxw9QxuDEvNxSQRwA/JwenrHc=
 github.com/hdevalence/ed25519consensus v0.0.0-20220222234857-c00d1f31bab3 h1:aSVUgRRRtOrZOC1fYmY9gV0e9z/Iu+xNVSASWjsuyGU=
 github.com/hdevalence/ed25519consensus v0.0.0-20220222234857-c00d1f31bab3/go.mod h1:5PC6ZNPde8bBqU/ewGZig35+UIZtw9Ytxez8/q5ZyFE=
-github.com/histolabs/cosmos-sdk v0.0.0-20221230021044-779df3c9a0f5 h1:bKd7CsMg4dFkqQ9CQq/vMRlcPEpo1wPJZOsS114PtNA=
-github.com/histolabs/cosmos-sdk v0.0.0-20221230021044-779df3c9a0f5/go.mod h1:2Oq+pYLgUOdcv++AXR77Nv/Yiw4dckswSQN1iyScUqk=
 github.com/histolabs/tendermint v0.0.0-20221227204023-ec49dd7d580f h1:kKbennoGXeAoinjF9jrcYF7bSJpjw14UGQEqe4TXexQ=
 github.com/histolabs/tendermint v0.0.0-20221227204023-ec49dd7d580f/go.mod h1:S0QMQWprpLDnBooMFbQYEVUGzZJaLMwOvtG7tbWoAiY=
 github.com/holiman/bloomfilter/v2 v2.0.3/go.mod h1:zpoh+gs7qcpqrHr3dB55AMiJwo0iURXE7ZOP9L9hSkA=
