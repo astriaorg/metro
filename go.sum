@@ -110,8 +110,8 @@ github.com/armon/go-metrics v0.4.1 h1:hR91U9KYmb6bLBYLQjyM+3j+rcd/UhE+G78SFnF8gJ
 github.com/armon/go-metrics v0.4.1/go.mod h1:E6amYzXo6aW1tqzoZGT755KkbgrJsSdpwZ+3JqfkOG4=
 github.com/armon/go-radix v0.0.0-20180808171621-7fddfc383310/go.mod h1:ufUuZ+zHj4x4TnLV4JWEpy2hxWSpsRywHrMgIH9cCH8=
 github.com/aryann/difflib v0.0.0-20170710044230-e206f873d14a/go.mod h1:DAHtR1m6lCRdSC2Tm3DSWRPvIPr6xNKyeHdqDQSQT+A=
-github.com/astriaorg/cosmos-sdk v0.0.0-20230607143235-929efdded487 h1:TFKpb6yKViNqY9O6Fo4A1XhmjlxY5FmIaXbz2sQX0PA=
-github.com/astriaorg/cosmos-sdk v0.0.0-20230607143235-929efdded487/go.mod h1:2Oq+pYLgUOdcv++AXR77Nv/Yiw4dckswSQN1iyScUqk=
+github.com/astriaorg/cosmos-sdk v0.0.0-20230607143928-694756d0eb0a h1:YVM7zhwioq4PL1xWZ55SW3i22ZAs+VUwURl8cJ6uJMI=
+github.com/astriaorg/cosmos-sdk v0.0.0-20230607143928-694756d0eb0a/go.mod h1:2Oq+pYLgUOdcv++AXR77Nv/Yiw4dckswSQN1iyScUqk=
 github.com/aws/aws-lambda-go v1.13.3/go.mod h1:4UKl9IzQMoD+QF79YdCuzCwp8VbmG4VAQwij/eHl5CU=
 github.com/aws/aws-sdk-go v1.15.78/go.mod h1:E3/ieXAlvM0XWO57iftYVDLLvQ824smPP3ATZkfNZeM=
 github.com/aws/aws-sdk-go v1.27.0/go.mod h1:KmX6BPdI08NWTb3/sm4ZGu5ShLoqVDhKgpiN924inxo=
